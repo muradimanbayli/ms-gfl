@@ -1,0 +1,27 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-book-table
+      author: Murad.Imanbayli
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    primaryKeyName: pk_book_id
+                  name: id
+                  type: bigint
+              - column:
+                  name: book_name
+                  type: VARCHAR(500)
+              - column:
+                  name: author
+                  type: VARCHAR(500)
+              - column:
+                  name: price
+                  type: decimal
+              - column:
+                  name: currency
+                  type: VARCHAR(3)
+            tableName: book
